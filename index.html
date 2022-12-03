@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="jquery-3.6.1.js"></script>
+    <script src="jquery.js"></script>
     <script src="script.js"> </script>
     
     <title>Salary Calculator Assignment</title>
@@ -14,10 +14,31 @@
 <h2> Add Employee</h2>
 <body>
        
-        <input id="employee first name" type="text" placeholder="first name">
-        <input id="employee last name" type="text" placeholder="last name">
-        <input id="Job Title" type="text" placeholder="Job title">
-            <button> Submit</button>
+        <input id="employee first name" type="text" placeholder="First Name">
+        <input id="employee last name" type="text" placeholder="Last Name">
+        <input id="Job Title" type=Number placeholder="Job Title">
+        <input id="Job ID"    type=Number placeholder="ID">
+        <input id="Annual Salary" type='text' placeholder="Annual Salary">
+            <button id="buttonToAddEmployee"> Submit</button>
 
+<table>
+<thead> </thead>
+    <tr> 
+    <th> First Name </th>
+    <th> Last Name</th>
+    <th> ID</th>
+    <th>Title</th>
+    <th>Annual Salary</th>
+    <th>  </th>
+</tr>
+
+<td> <button> Delete </button></td>
+
+</tr>
+<tr class="rowData"></tr>
+<tr></tr>
+<tbody> </tbody>
+
+</table>
 </body>
 </html>
