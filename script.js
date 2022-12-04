@@ -7,17 +7,21 @@ function onReady() {
   $("#buttonToAddEmployee").on("click", addNewEmployee);
   $("#buttonToAddEmployee").on("click", employeeSalary);
   $("body").on("click", ".deleteemployee", deletebutton);
-  $('#buttonToAddEmployee').on('click', render)
- 
+  $("#buttonToAddEmployee").on("click", render);
 }
 
 function render() {
-   
-    if (monthlyCost > 20000) {
-        console.log(monthlyCost)
-      $("h3").css("background-color", "red");
-    }
+  if (monthlyCost > 20000) {
+    console.log(monthlyCost);
+    $("h3").css("background-color", "red");
   }
+  $("#employeefirstname").val("");
+  $("#employeelastname").val("");
+  $("#JobTitle").val("");
+  $("#JobID").val("");
+  $("#AnnualSalary").val("");
+
+}
 
 function addNewEmployee() {
   let newFirstName = $("#employeefirstname").val();
@@ -53,16 +57,9 @@ function addNewEmployee() {
 
 function deletebutton() {
   let getRidOf = $(this).parent().parent();
-console.log(employeeList);
+  console.log(employeeList);
   getRidOf.remove();
 }
-
-$("#employeefirstname").val("");
-$("#employeelastname").val("");
-$("#JobTitle").val("");
-$("#JobID").val("");
-$("#AnnualSalary").val("");
-render();
 
 function employeeSalary() {
   let yearlySalary = $("#AnnualSalary").val();
@@ -71,7 +68,3 @@ function employeeSalary() {
   $("#Salary").text(monthlyCost);
 }
 
-function whenEmployeeDeleted (){
-    $('')
-
-}
